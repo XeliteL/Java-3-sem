@@ -1,4 +1,4 @@
-package Prak4.Part2.Num1;
+package Prak4.Part2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
