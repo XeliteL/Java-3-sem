@@ -7,18 +7,10 @@ public class Rectangle extends GeometricObject {
     private double height;
 
     public Rectangle() {
-        this.width = 1.0;
-        this.height = 1.0;
+        this(1.0, 1.0);
     }
 
     public Rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
-    }
-
-    public Rectangle(double width, double height,
-                        String color, boolean filled) {
-        super(color, filled);
         this.width = width;
         this.height = height;
     }
@@ -38,7 +30,6 @@ public class Rectangle extends GeometricObject {
     @Override
     public String toString() {
         return "Прямоугольник: ширина = " + width +
-                "\nВысота = " + height +
-                "\n" + super.toString();
+                ", высота = " + height;
     }
 }

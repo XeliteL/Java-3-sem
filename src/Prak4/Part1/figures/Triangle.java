@@ -8,10 +8,8 @@ public class Triangle extends GeometricObject {
     private double side2;
     private double side3;
 
-    public Triangle() {
-        this.side1 = 1.0;
-        this.side2 = 1.0;
-        this.side3 = 1.0;
+    public Triangle() throws IllegalTriangleException {
+        this(1.0, 1.0, 1.0);
     }
 
     public Triangle(double side1, double side2, double side3)
@@ -20,8 +18,8 @@ public class Triangle extends GeometricObject {
                 (side1 + side3 <= side2) ||
                 (side2 + side3 <= side1)) {
                 throw new IllegalTriangleException(
-                        "Невозможно создать треугольник"
-            );
+                        "Сумма двух сторон должна быть больше третьей"
+                );
             }
 
         this.side1 = side1;
@@ -47,8 +45,7 @@ public class Triangle extends GeometricObject {
     @Override
     public String toString() {
         return "Треугольник: сторона1 = " + side1 +
-                "\nСторона2 = " + side2 +
-                "\nСторона3 = " + side3 +
-                "\n" + super.toString();
+                ", сторона2 = " + side2 +
+                ", сторона3 = " + side3;
     }
 }

@@ -7,11 +7,11 @@ public abstract class GeometricObject
     private java.util.Date dateCreated;
 
     public GeometricObject() {
-        dateCreated = new java.util.Date();  // фиксируем момент создания
+        dateCreated = new java.util.Date();
     }
 
     public GeometricObject(String color, boolean filled) {
-        dateCreated = new java.util.Date();  // фиксируем дату создания
+        this();
         this.color = color;
         this.filled = filled;
     }
@@ -28,10 +28,8 @@ public abstract class GeometricObject
     public abstract double getPerimeter();
 
     @Override
-    public int compareTo(GeometricObject other) {
-        if (this.getArea() > other.getArea()) return 1;
-        else if (this.getArea() < other.getArea()) return -1;
-        return 0;
+    public int compareTo(GeometricObject o) {
+        return Double.compare(this.getArea(), o.getArea());
     }
 
     public static GeometricObject max(GeometricObject o1,  GeometricObject o2) {
@@ -40,8 +38,7 @@ public abstract class GeometricObject
 
     @Override
     public String toString() {
-        return "Создан: " + dateCreated +
-                "\nЦвет: " + color +
-                "\nЗакрашен: " + filled;
+        return "Цвет: " + color +
+               "\nЗакрашен: " + filled;
     }
 }

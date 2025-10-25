@@ -9,27 +9,20 @@ import Prak4.Part1.figures.Square;
 import Prak4.Part1.figures.Triangle;
 
 public class TestColorable {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalTriangleException {
+        GeometricObject[] shapes = new GeometricObject[5];
+        shapes[0] = new Circle(2);
+        shapes[1] = new Rectangle(3, 4);
+        shapes[2] = new Square(5);
+        shapes[3] = new Triangle(3, 4, 5);
+        shapes[4] = new Square(2.5);
 
-        GeometricObject[] objects = new GeometricObject[5];
+        for (GeometricObject shape : shapes) {
+            System.out.println("\n" + shape);
+            System.out.println("Площадь: " + shape.getArea());
 
-        try {
-            objects[0] = new Square(4, "red", true);
-            objects[1] = new Circle(3, "blue", false);
-            objects[2] = new Rectangle(2, 5, "green", true);
-            objects[3] = new Triangle(3, 4, 5);
-            objects[4] = new Square(6, "yellow", true);
-        } catch (IllegalTriangleException e) {
-            System.out.println("Ошибка: " + e.getMessage());
-        }
-
-        for (GeometricObject obj : objects) {
-            System.out.println("\n" + obj);
-            System.out.println("Площадь: " + obj.getArea());
-
-            if (obj instanceof Colorable) {
-                Colorable colorable = (Colorable) obj;
-                colorable.howToColor();
+            if (shape instanceof Colorable) {
+                ((Colorable) shape).howToColor();
             }
         }
     }

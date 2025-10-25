@@ -7,15 +7,10 @@ public class Square extends GeometricObject implements Colorable {
     private double side;
 
     public Square() {
-        this.side = 1.0;
+        this(0);
     }
 
     public Square(double side) {
-        this.side = side;
-    }
-
-    public Square(double side, String color, boolean filled) {
-        super(color, filled);
         this.side = side;
     }
 
@@ -39,7 +34,6 @@ public class Square extends GeometricObject implements Colorable {
 
     @Override
     public String toString() {
-        return "Квадрат: сторона = " + side +
-                "\n" + super.toString();
+        return "Квадрат: сторона = " + side;
     }
 }

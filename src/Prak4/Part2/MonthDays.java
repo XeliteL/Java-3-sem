@@ -18,7 +18,7 @@ public class MonthDays {
             int numMonth = userMonth.nextInt();
 
             System.out.println("Месяц: " + months[numMonth - 1]);
-            System.out.println("\nКоличество дней: " + dom[numMonth - 1]);
+            System.out.println("Количество дней: " + dom[numMonth - 1]);
 
         } catch (ArrayIndexOutOfBoundsException  e) {
             System.out.println("Недопустимый номер месяца");

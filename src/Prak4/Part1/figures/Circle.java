@@ -6,15 +6,10 @@ public class Circle extends GeometricObject {
     private double radius;
 
     public Circle() {
-        this.radius = 1.0;
+        this(1.0);
     }
 
     public Circle(double radius) {
-        this.radius = radius;
-    }
-
-    public Circle(double radius, String color, boolean filled) {
-        super(color, filled);
         this.radius = radius;
     }
 
@@ -29,7 +24,6 @@ public class Circle extends GeometricObject {
 
     @Override
     public String toString() {
-        return "Круг: радиус = " + radius +
-                "\n" + super.toString();
+        return "Круг: радиус = " + radius;
     }
 }
