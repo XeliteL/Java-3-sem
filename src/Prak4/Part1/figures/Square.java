@@ -5,6 +5,7 @@ import Prak4.Part1.GeometricObject;
 
 public class Square extends GeometricObject implements Colorable {
     private double side;
+    private String color;
 
     public Square() {
         this(0);
@@ -16,6 +17,9 @@ public class Square extends GeometricObject implements Colorable {
 
     public void setSide(double side) { this.side = side; }
     public double getSide() { return side; }
+
+    public void setColor(String color) { this.color = color; }
+    public String getColor() { return this.color; }
 
     @Override
     public double getPerimeter() {
@@ -29,7 +33,8 @@ public class Square extends GeometricObject implements Colorable {
 
     @Override
     public void howToColor() {
-        System.out.println("Раскрасьте квадрат");
+        if (this.color == null) { System.out.println("Раскрасьте квадрат"); }
+        else { System.out.println(this.getColor()); }
     }
 
     @Override

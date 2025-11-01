@@ -10,7 +10,7 @@ public class ComparableCircle extends Circle {
     @Override
     public int compareTo(GeometricObject o) {
         if (o instanceof Circle)
-            return Double.compare(this.getArea(), ((Circle) o).getArea());
+            return Double.compare(this.getArea(), o.getArea());
         return 0;
     }
 }

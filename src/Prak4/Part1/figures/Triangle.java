@@ -44,8 +44,8 @@ public class Triangle extends GeometricObject {
 
     @Override
     public String toString() {
-        return "Треугольник: сторона1 = " + side1 +
-                ", сторона2 = " + side2 +
-                ", сторона3 = " + side3;
+        return "Треугольник: сторона 1 = " + side1 +
+                ", сторона 2 = " + side2 +
+                ", сторона 3 = " + side3;
     }
 }

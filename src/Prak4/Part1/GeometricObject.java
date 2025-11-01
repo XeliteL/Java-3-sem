@@ -4,7 +4,7 @@ public abstract class GeometricObject
         implements Comparable<GeometricObject> {
     private String color;
     private boolean filled;
-    private java.util.Date dateCreated;
+    private final java.util.Date dateCreated;
 
     public GeometricObject() {
         dateCreated = new java.util.Date();

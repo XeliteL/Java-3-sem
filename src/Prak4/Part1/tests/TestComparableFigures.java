@@ -6,7 +6,7 @@ import Prak4.Part1.figures.Circle;
 import Prak4.Part1.figures.Rectangle;
 
 public class TestComparableFigures {
-    public static void main(String[] args) {
+    static void main() {
         Circle c1 = new Circle(5);
         Circle c2 = new Circle(7);
         System.out.println("\nБольший круг: " + GeometricObject.max(c1, c2));

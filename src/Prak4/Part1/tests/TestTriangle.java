@@ -6,7 +6,7 @@ import Prak4.Part1.figures.Triangle;
 import java.util.Scanner;
 
 public class TestTriangle {
-    public static void main(String[] args) {
+    static void main() {
         Scanner input = new Scanner(System.in);
 
         try {
@@ -33,6 +33,7 @@ public class TestTriangle {
             System.out.println("Площадь: " + triangle.getArea());
             System.out.println("Периметр: " + triangle.getPerimeter());
             System.out.println("Цвет: " + triangle.getColor());
+            System.out.println("Закрашен: " + triangle.getFilled());
 
         } catch (IllegalTriangleException ex) {
             System.out.println("Ошибка: " + ex.getMessage());
