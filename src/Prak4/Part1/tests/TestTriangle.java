@@ -6,7 +6,7 @@ import Prak4.Part1.figures.Triangle;
 import java.util.Scanner;
 
 public class TestTriangle {
-    static void main() {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         try {

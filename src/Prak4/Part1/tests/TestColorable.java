@@ -7,7 +7,7 @@ import Prak4.Part1.figures.Square;
 import Prak4.Part1.figures.Triangle;
 
 public class TestColorable {
-    static void main() throws IllegalTriangleException {
+    public static void main(String[] args) throws IllegalTriangleException {
         GeometricObject[] shapes = new GeometricObject[3];
         shapes[0] = new Triangle(3, 4, 5);
         shapes[1] = new Square(2.5);
