@@ -39,11 +39,9 @@ public class MyStackCloneable implements Cloneable {
             MyStackCloneable copy = (MyStackCloneable) super.clone();
             copy.list = new ArrayList<>();
             for (Object obj : this.list) {
-                // Пример: если элемент клонируемый (например Date), создаём его копию
                 if (obj instanceof Date) {
                     copy.list.add(((Date) obj).clone());
                 } else {
-                    // Остальные типы считаем неизменяемыми (String, Integer и т.п.)
                     copy.list.add(obj);
                 }
             }
